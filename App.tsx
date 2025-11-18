@@ -13,6 +13,7 @@ import {
   View,
 } from "react-native";
 import BubbleManager from "./BubbleManager";
+import Wave from "./Wave";
 const { width, height } = Dimensions.get("window");
 const colors = {
   black: "#323F4E",
@@ -104,20 +105,16 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Animated.View
-        style={[
-          StyleSheet.absoluteFillObject,
-          {
-            height,
-            width,
-            backgroundColor: '#7fdfffff',
-            transform: [
-              {
-                translateY: timerValue,
-              },
-            ],
-          },
-        ]}
+      <Wave
+        height={height}
+        color={'#7fdfffff'}
+        style={{
+          transform: [
+            {
+              translateY: timerValue,
+            },
+          ],
+        }}
       />
       <BubbleManager isVisible={isCountingDown} />
       <Animated.View
