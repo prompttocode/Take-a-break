@@ -1,4 +1,4 @@
-package com.a
+package com.kenhtao.takebreak
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

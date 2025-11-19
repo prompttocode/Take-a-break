@@ -1,4 +1,4 @@
-package com.a
+package com.kenhtao.takebreak
 
 import android.app.Application
 import com.facebook.react.PackageList
