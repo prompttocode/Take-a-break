@@ -12,6 +12,7 @@ import {
   Vibration,
   View,
 } from "react-native";
+import Toast from "react-native-toast-message";
 import BubbleManager from "./BubbleManager";
 import Wave from "./Wave";
 const { width, height } = Dimensions.get("window");
@@ -85,6 +86,10 @@ export default function App() {
       timerValue.setValue(height);
       textAnimatedValue.setValue(duration);
       setIsCountingDown(false);
+      Toast.show({
+        type: "success",
+        text1: `bạn đã hoàn thành ${duration} giây`,
+      });
       Animated.timing(animatedValue, {
         toValue: 0,
         duration: 400,
@@ -226,6 +231,7 @@ export default function App() {
           }}
         />
       </View>
+      <Toast />
     </View>
   );
 }
